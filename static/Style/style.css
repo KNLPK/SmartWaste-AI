@@ -1,0 +1,317 @@
+/*-----------------------------------*\
+    #STYLE CSS
+\*-----------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(207, 206, 206, 1) 100%
+  );
+  color: hsl(231, 6%, 40%);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+/*-----------------------------------*\
+    #CONTAINER & SECTIONS
+\*-----------------------------------*/
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section {
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+}
+.gridSection {
+  display: grid;
+  width: 85%;
+  margin: auto;
+  margin-top: 2em;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 5em;
+  grid-template-columns: 1fr 1fr;
+}
+.headline {
+  color: #000;
+  font-size: 4.5rem;
+  width: 100%;
+}
+.services {
+  width: 90%;
+  margin: auto;
+  gap: 10;
+  align-items: center;
+}
+.offers {
+  display: grid;
+  gap: 40px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.offerDesc h1 {
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  color: #000;
+}
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2.5rem 1rem;
+  padding-bottom: 10rem;
+  margin-top: 5%;
+  margin-bottom: 7rem;
+}
+/*-----------------------------------*\
+    #JUMBOTRON
+\*-----------------------------------*/
+.jumbotron {
+  background-image: url("../Image/background1.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  border-radius: 12px;
+  height: 650px;
+}
+.jumbotron h1 {
+  font-size: 5.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.jumbotron p {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+}
+.container1 .btn {
+  background-color: hsl(230, 14%, 9%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: max-content;
+  padding: 20px 40px;
+  border-radius: 15px;
+  line-height: 1.4;
+  transition: 0.5s ease;
+  border: 1.5px solid #fff;
+}
+.container1 .btn:is(:hover, :focus-visible) {
+  background-color: hsl(0, 0%, 100%);
+  color: #000;
+  border-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.container1 .btn:hover {
+  background-color: #70CC2F;
+  border: 2.5px solid #000;
+}
+
+/*-----------------------------------*\
+    #SECTION__DETAILS
+\*-----------------------------------*/
+.section__subheader {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #70CC2F;
+  margin-left: 30px;
+}
+.section__header {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  color: #0a0b0f;
+  margin-bottom: 1rem;
+  margin-left: 30px;
+}
+.section__description {
+  margin-bottom: 1.8rem;
+  line-height: 2.2rem;
+  color: #6b7280;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.btn-primary {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: max-content;
+  padding: 20px 40px;
+  border-radius: 20px 0;
+  line-height: 1.4;
+  transition: 0.5 ease;
+  border: 2px solid #70CC2F;
+  margin-left: 30px;
+}
+.btn-primary:is(:hover, :focus-visible) {
+  background-color: #70CC2F;
+  color: #fff;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+}
+.btn:hover {
+  background-color: #70CC2F;
+}
+.logo img {
+  max-width: 150px;
+  border-radius: 15px;
+  margin: auto;
+}
+.experience__container {
+  display: grid;
+  gap: 2rem;
+}
+.experience__image img {
+  max-width: 550px;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.space {
+  height: 200px;
+}
+
+/*-----------------------------------*\
+    #ANIMATION
+\*-----------------------------------*/
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*-----------------------------------*\
+    #MEDIA QUERY
+\*-----------------------------------*/
+@media (max-width: 768px) {
+  .jumbotron {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+  .jumbotron p {
+    font-size: 1.25rem;
+  }
+  .gallery img {
+    width: calc(50% - 10px);
+  }
+}
+@media (width > 768px) {
+  .banner__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .banner__image {
+    grid-column: 3/5;
+  }
+  .experience__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .service__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .customisation__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .price__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact__content {
+    grid-column: 2/3;
+  }
+}
+@media (width > 1024px) {
+  .price__grid {
+    gap: 2rem;
+  }
+}
+@media (min-width: 575px) {
+  .hero .container {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+@media (min-width: 800px) {
+  .hero .container {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+

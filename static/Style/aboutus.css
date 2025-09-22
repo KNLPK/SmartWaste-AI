@@ -1,0 +1,264 @@
+/*-----------------------------------*\
+    #STYLE CSS
+\*-----------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+img,
+span {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  height: auto;
+}
+input {
+  background: none;
+  border: none;
+  font: inherit;
+}
+input {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+html {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  color: hsl(231, 6%, 40%);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(207, 206, 206, 1) 100%
+  );
+  color: #000;
+}
+
+/*-----------------------------------*\
+    #HEADINGS
+\*-----------------------------------*/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Quicksand", sans-serif;
+  color: #000;
+  line-height: 1.3;
+}
+/*-----------------------------------*\
+    #CONTAINER & SECTIONS
+\*-----------------------------------*/
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_content .content span {
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main_content .content p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.main_content .car_img {
+  width: 100%;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section {
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+}
+.gridSection {
+  display: grid;
+  width: 85%;
+  margin: auto;
+  margin-top: 2em;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 5em;
+  grid-template-columns: 1fr 1fr;
+}
+.bouncepic img {
+  animation: bounce 15s infinite;
+}
+.headline {
+  color: #000;
+  font-size: 4.5rem;
+  width: 100%;
+}
+.sectionPic {
+  order: 0;
+}
+.sectionPic img {
+  width: 100%;
+  display: flex;
+}
+.sectionDesc {
+  order: 1;
+  margin-top: 1em;
+}
+.aboutusDesc {
+  order: 0;
+}
+.services {
+  width: 90%;
+  margin: auto;
+  gap: 10;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.offers {
+  display: grid;
+  gap: 40px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.eachOffer1,
+.eachOffer2,
+.eachOffer3 {
+  display: flex;
+  align-items: flex-start;
+}
+.eachOffer1 img {
+  margin-right: 0.1em;
+  margin-left: 1em;
+  width: 20%;
+}
+.eachOffer2 img {
+  margin-right: 1.5em;
+  margin-left: 1em;
+  width: 20%;
+}
+.eachOffer3 img {
+  margin-right: 1.5em;
+  margin-left: 1em;
+  width: 15%;
+}
+.offerDesc h1 {
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  color: #000;
+}
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2.5rem 1rem;
+  padding-bottom: 10rem;
+  margin-top: 5%;
+}
+
+/*-----------------------------------*\
+    #ANIMATIONS
+\*-----------------------------------*/
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/*-----------------------------------*\
+    #MEDIA QUERY
+\*-----------------------------------*/
+@media (width > 768px) {
+  .banner__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .banner__image {
+    grid-column: 3/5;
+  }
+  .experience__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .service__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .customisation__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .price__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact__content {
+    grid-column: 2/3;
+  }
+}
+@media (width > 1024px) {
+  .price__grid {
+    gap: 2rem;
+  }
+}
+@media (min-width: 575px) {
+  .hero .container {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+@media (min-width: 800px) {
+  .hero .container {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}

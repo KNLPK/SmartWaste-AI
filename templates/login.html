@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='Image/Logo1.png') }}">
+		<title>Smart Waste</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='Style/login.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='Style/Header&Footer.css') }}">
+	</head>
+	<body>
+        <!-- CONTAINER -->
+		<div class="container">
+            <!-- HEADER -->
+			<div class="header" data-reveal="down">
+				<div class="logo" data-reveal="left">
+					<a href="{{ url_for('index') }}">
+						<img src="{{ url_for('static', filename='Image/Logo1.png') }}" alt="Logo">
+					</a>
+				</div>
+				<div class="nav" data-reveal="down">
+					<ul>
+						<li data-reveal="left">
+							<a href="{{ url_for('index') }}">HOME</a>
+						</li>
+						<li data-reveal="left">
+							<a href="{{ url_for('product_page') }}">PRODUCT PAGE</a>
+						</li>
+						<li data-reveal="right">
+							<a href="{{ url_for('detect_trash') }}">DETECT TRASH</a>
+						</li>
+						<li data-reveal="right">
+							<a href="{{ url_for('about_us') }}">ABOUT US</a>
+						</li>
+					</ul>
+				</div>
+				<div class="buttons" data-reveal="right">
+					<a href="{{ url_for('login') }}">
+						<button class="active">LOGIN</button>
+					</a>
+				</div>
+				<!-- Burger Menu -->
+				<div class="burger-button" data-reveal="right">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- Dropdown Navigation -->
+				<div class="dropdown-nav hidden">
+					<ul>
+						<li>
+							<a href="{{ url_for('index') }}">HOME</a>
+						</li>
+						<li>
+							<a href="{{ url_for('product_page') }}">PRODUCT PAGE</a>
+						</li>
+						<li>
+							<a href="{{ url_for('detect_trash') }}">DETECT TRASH</a>
+						</li>
+						<li>
+							<a href="{{ url_for('about_us') }}">ABOUT US</a>
+						</li>
+						<li>
+							<a href="{{ url_for('login') }}">LOGIN</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <!-- TAGLINE -->
+			<div class="content" data-reveal="up">
+				<h1>Manage Waste <br> With Intelligence </h1>
+			</div>
+            <!-- LOGIN -->
+            <section class="container forms">
+                <div class="form login" id="loginForm" data-reveal="up">
+                    <div class="form-content">
+                        <header>Login</header>
+                        <form id="loginForm" action="" method="GET">
+                            <div class="field input-field">
+                                <input id="email" type="email" placeholder="Email" class="input">
+                            </div>
+                            <div class="field input-field">
+                                <input id="password" type="password" placeholder="Password" class="password">
+                                <img src="{{ url_for('static', filename='SVG/eye-no-svgrepo-com.svg') }}" class="eye-icon" data-toggle="password">
+                            </div>
+                            <div id="errorMessage1" class="errorMessage"></div>
+                            <div class="form-link">
+                                <a href="#" class="forgot-pass">Forgot password?</a>
+                            </div>
+                            <div class="field button-field">
+                                <button class="btn" type="submit" onclick="signIn()">Login</button>
+                            </div>
+                        </form>
+                        <div class="form-link">
+                            <span>Don't have an account? <a href="#" class="link signup-link">Signup</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="media-options">
+                        <a href="#" class="field facebook">
+                            <img src="{{ url_for('static', filename='SVG/logo-facebook-svgrepo-com.svg') }}" class="facebook-icon">
+                            <span>Login with Facebook</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- SIGN UP -->
+                <div class="form signup">
+                    <div class="form-content">
+                        <header>Sign Up</header>
+                        <form id="signupForm" action="#">
+                            <div class="field input-field">
+                                <input id="name" type="text" placeholder="Your Name" class="name">
+                            </div>
+                            <div class="field input-field">
+                                <input id="signupEmail" type="email" placeholder="Email" class="email">
+                            </div>
+                            <div class="field input-field">
+                                <input id="signupPassword" type="password" placeholder="Create password" class="password">
+                                <img src="{{ url_for('static', filename='SVG/eye-no-svgrepo-com.svg') }}" class="eye-icon" data-toggle="password">
+                            </div>
+                            <div class="field input-field">
+                                <input id="confirmPassword" type="password" placeholder="Confirm password" class="confirm-password">
+                                <img src="{{ url_for('static', filename='SVG/eye-no-svgrepo-com.svg') }}" class="eye-icon" data-toggle="password">
+                            </div>
+                            <div class="field input-field">
+                                <input id="phone_number" type="text" placeholder="Your Phone Number" class="ph-number" pattern="\d*">
+                            </div>
+                            <div id="errorMessage2" class="errorMessage"></div>
+                            <div class="field button-field">
+                                <button class="btn" onclick="signUp()">Sign Up</button>
+                            </div>
+                        </form>
+                        <div class="form-link">
+                            <span>Already have an account? <a href="#" class="link login-link">Login</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+		<!-- JS LINK -->
+		<script src="{{ url_for('static', filename='Script/login.js') }}"></script>
+		<script src="{{ url_for('static', filename='Script/script.js') }}"></script>
+	</body>
+</html>
