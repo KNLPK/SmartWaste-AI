@@ -1,11 +1,5 @@
 # SmartWaste: AI-Based Waste Classification
-<img width="1888" height="937" alt="image" src="https://github.com/user-attachments/assets/5dfb2eea-dd64-4211-a20c-6a00d7a7c850" />
-
-<img width="1895" height="940" alt="image" src="https://github.com/user-attachments/assets/3494a879-3382-4085-9d8f-205079015b41" />
-
-<img width="1888" height="944" alt="image" src="https://github.com/user-attachments/assets/cb80f7bb-3615-4f8d-a5c4-13a911d138e5" />
-
-<img width="1891" height="936" alt="image" src="https://github.com/user-attachments/assets/5b977886-ff83-45a1-a51c-d547d27d8e4f" />
+<img src="https://github.com/user-attachments/assets/5b977886-ff83-45a1-a51c-d547d27d8e4f" width="600"/>
 
 SmartWaste is an AI-powered web application that classifies waste images into specific categories using deep learning. Built with TensorFlow and Flask, this project aims to support environmental awareness and proper waste sorting through intelligent image detection.
 
